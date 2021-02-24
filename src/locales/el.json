@@ -1,0 +1,21 @@
+{
+  "message": "γεια",
+  "language": {
+    "language": "Γλώσσα",
+    "english": "Αγγλικά",
+    "greek": "Ελληνικά"
+  },
+  "user": {
+    "login": "Είσοδος",
+    "logout": "Αποσύνδεση"
+  },
+  "appbar": {
+    "tabs": {
+      "home": "Αρχικη",
+      "project": "Το Εργο",
+      "news": "Νεα",
+      "files": "Αρχεια",
+      "contact": "Επικοινωνια"
+    }
+  }
+}

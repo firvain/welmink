@@ -1,3 +1,21 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "language": {
+    "language": "Language",
+    "english": "English",
+    "greek": "Greek"
+  },
+  "user": {
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "appbar": {
+    "tabs": {
+      "home": "Home",
+      "project": "Project",
+      "news": "News",
+      "files": "Files",
+      "contact": "Contact"
+    }
+  }
 }

@@ -1,5 +1,7 @@
 import Vue from "vue";
 import Vuetify from "vuetify/lib/framework";
+import GreeKFlag from "../components/GreekFlag.vue";
+import UkFlag from "../components/UkFlag.vue";
 
 Vue.use(Vuetify);
 
@@ -10,13 +12,24 @@ export default new Vuetify({
     },
     themes: {
       light: {
-        primary: "#ee44aa",
-        secondary: "#424242",
-        accent: "#82B1FF",
-        error: "#FF5252",
-        info: "#2196F3",
-        success: "#4CAF50",
-        warning: "#FFC107"
+        primary: "#795548",
+        secondary: "#009688",
+        accent: "#607d8b",
+        error: "#f44336",
+        warning: "#ff5722",
+        info: "#2196f3",
+        success: "#4caf50"
+      }
+    }
+  },
+  icons: {
+    iconfont: "mdiSvg",
+    values: {
+      GreekFlag: {
+        component: GreeKFlag
+      },
+      UkFlag: {
+        component: UkFlag
       }
     }
   }
