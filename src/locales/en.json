@@ -20,8 +20,10 @@
   },
   "contact": {
     "name": "Name",
-    "emai": "Email",
+    "email": "Email",
     "message": "Your Message",
-    "submit": "submit"
+    "submit": "submit",
+    "successSubmit": "Submitted Succesfully",
+    "errorSubmit": "Something went wrong!"
   }
 }
