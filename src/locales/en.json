@@ -17,5 +17,11 @@
       "files": "Files",
       "contact": "Contact"
     }
+  },
+  "contact": {
+    "name": "Name",
+    "emai": "Email",
+    "message": "Your Message",
+    "submit": "submit"
   }
 }
