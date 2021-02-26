@@ -6,7 +6,6 @@
           <v-text-field
             v-model="name"
             :rules="nameRules"
-            :counter="20"
             :label="$t('contact.name')"
             required
           ></v-text-field>
@@ -53,10 +52,7 @@ export default {
     snackbarText: "",
     snackbarColor: "green darken-2",
     name: "",
-    nameRules: [
-      v => !!v || "Name is required",
-      v => v.length <= 20 || "Name must be less than 10 characters"
-    ],
+    nameRules: [v => !!v || "Name is required"],
     email: "",
     emailRules: [
       v => !!v || "E-mail is required",
