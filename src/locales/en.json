@@ -18,6 +18,9 @@
       "contact": "Contact"
     }
   },
+  "appfooter": {
+    "funding": "The project is funded by ROP Western Macedonia"
+  },
   "contact": {
     "name": "Name",
     "email": "Email",
@@ -27,9 +30,14 @@
     "errorSubmit": "Something went wrong!"
   },
   "pages": {
+    "project": {
+      "title": "Project",
+      "description": "Project Description",
+      "target": "Project Target"
+    },
+
     "news": {
       "projectNews": "Project News"
-      
     }
   }
 }
