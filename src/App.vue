@@ -16,13 +16,13 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
+      <v-btn v-if="!isLogged" :to="{ path: '/login' }" text>
         <span class="mr-2">{{ $t("user.login") }}</span>
         <v-icon>mdi-login-variant</v-icon>
+      </v-btn>
+      <v-btn v-if="isLogged" @click="logout" text>
+        <span class="mr-2">{{ $t("user.logout") }}</span>
+        <v-icon>mdi-logout-variant</v-icon>
       </v-btn>
       <v-btn @click="setLanguage" text>
         <v-icon v-if="this.$i18n.locale === 'en'">$UkFlag</v-icon>
@@ -46,31 +46,38 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <Footer app />
+    <AppFooter app />
   </v-app>
 </template>
 
 <script>
-import Footer from "./components/Footer";
+import AppFooter from "./components/AppFooter";
 // import Home from "./views/Home.vue";
 export default {
   name: "App",
 
   components: {
     // Home,
-    Footer
+    AppFooter
   },
   data() {
     return { tab: null };
   },
+  computed: {
+    isLogged() {
+      return this.$store.state.isLoggedIn;
+    }
+  },
   methods: {
     setLanguage() {
-      console.log(this.$vuetify.icons);
       if (this.$i18n.locale === "en") {
         this.$i18n.locale = "el";
       } else {
         this.$i18n.locale = "en";
       }
+    },
+    logout() {
+      this.$store.dispatch("logout");
     }
   }
 };
