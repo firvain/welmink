@@ -25,5 +25,11 @@
     "submit": "submit",
     "successSubmit": "Submitted Succesfully",
     "errorSubmit": "Something went wrong!"
+  },
+  "pages": {
+    "news": {
+      "projectNews": "Project News"
+      
+    }
   }
 }

@@ -25,5 +25,10 @@
     "submit": "υποβολη",
     "successSubmit": "Επιτυχής Υποβολή",
     "errorSubmit": "Συνέβει κάποιο σφάλμα!"
+  },
+  "pages": {
+    "news": {
+      "projectNews": "Νέα του Project"
+    }
   }
 }

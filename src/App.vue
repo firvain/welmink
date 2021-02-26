@@ -6,7 +6,7 @@
           alt="WelMink Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          :src="require('@/assets/mink_logo.svg')"
           transition="scale-transition"
           width="40"
         />
@@ -30,15 +30,9 @@
       </v-btn>
       <template v-slot:extension>
         <v-tabs v-model="tab" centered>
-          <v-tab :to="{ path: '/' }">{{ $t("appbar.tabs.home") }}</v-tab>
-          <v-tab :to="{ path: '/project' }">{{
-            $t("appbar.tabs.project")
-          }}</v-tab>
-          <v-tab :to="{ path: '/news' }">{{ $t("appbar.tabs.news") }}</v-tab>
-          <v-tab :to="{ path: '/files' }">{{ $t("appbar.tabs.files") }}</v-tab>
-          <v-tab :to="{ path: '/contact' }">{{
-            $t("appbar.tabs.contact")
-          }}</v-tab>
+          <v-tab v-for="(tab, index) in tabs" :key="index" :to="tab.path">
+            {{ tab.text }}
+          </v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
@@ -61,19 +55,33 @@ export default {
     AppFooter
   },
   data() {
-    return { tab: null };
+    return {
+      tab: null
+    };
   },
   computed: {
     isLogged() {
       return this.$store.state.isLoggedIn;
+    },
+    tabs() {
+      return [
+        { path: "/", text: this.$t("appbar.tabs.home") },
+        { path: "/project", text: this.$t("appbar.tabs.project") },
+        { path: "/news", text: this.$t("appbar.tabs.news") },
+        { path: "/files", text: this.$t("appbar.tabs.files") },
+        { path: "/contact", text: this.$t("appbar.tabs.contact") }
+      ];
     }
   },
   methods: {
     setLanguage() {
       if (this.$i18n.locale === "en") {
         this.$i18n.locale = "el";
+
+        this.$forceUpdate();
       } else {
         this.$i18n.locale = "en";
+        this.$forceUpdate();
       }
     },
     logout() {
