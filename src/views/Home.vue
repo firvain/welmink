@@ -15,16 +15,16 @@
           Welcome to WelMink
         </h1>
 
-        <p class="subheading font-weight-regular">
+        <!-- <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
           <br />please join our online
           <a href="https://community.vuetifyjs.com" target="_blank"
             >Discord Community</a
           >
-        </p>
+        </p> -->
       </v-col>
 
-      <v-col class="mb-5" cols="12">
+      <!-- <v-col class="mb-5" cols="12">
         <h2 class="headline font-weight-bold mb-3">
           What's next?
         </h2>
@@ -76,7 +76,7 @@
             {{ eco.text }}
           </a>
         </v-row>
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>
