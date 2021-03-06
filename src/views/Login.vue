@@ -2,7 +2,7 @@
   <v-form v-model="valid" @submit.prevent="login" class="pt-6">
     <v-container fluid>
       <v-row justify="center">
-        <v-col cols="12" md="3">
+        <v-col cols="12" md="4">
           <v-card outlined class="mx-auto">
             <v-card-text>
               <v-row>
