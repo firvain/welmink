@@ -1,30 +1,26 @@
 <template>
   <v-container fluid>
-    <v-row class="text-center">
+    <v-row class="text-center" align="center" justify="center">
       <v-col cols="12" class="px-0">
         <v-img
-          :src="require('../assets/mink-cage.jpg')"
+          :src="require('../../assets/mink-cage.jpg')"
           alt="Mink Cage"
           class="my-3"
           height="400"
         />
       </v-col>
 
-      <v-col class="mb-4">
+      <v-col cols="6" class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to WelMink
+          WelMink
         </h1>
 
         <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br />please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank"
-            >Discord Community</a
-          >
+          {{ content[0].body }}
         </p>
       </v-col>
 
-      <v-col class="mb-5" cols="12">
+      <!-- <v-col class="mb-5" cols="12">
         <h2 class="headline font-weight-bold mb-3">
           What's next?
         </h2>
@@ -76,12 +72,14 @@
             {{ eco.text }}
           </a>
         </v-row>
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>
 
 <script>
+import el from "./locales/el.json";
+import en from "./locales/en.json";
 export default {
   name: "HelloWorld",
 
@@ -136,6 +134,15 @@ export default {
         href: "https://vuetifyjs.com/getting-started/frequently-asked-questions"
       }
     ]
-  })
+  }),
+  computed: {
+    content() {
+      console.log(el);
+      if (this.$i18n.locale === "en") {
+        return en.content;
+      }
+      return el.content;
+    }
+  }
 };
 </script>

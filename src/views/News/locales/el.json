@@ -1,0 +1,46 @@
+{
+  "news": [
+    {
+      "date": "24/02/2021",
+      "imgSrc": "https://picsum.photos/300/300?random=1",
+      "title": "Τελευταία Συνάντηση",
+      "body": "Tο Lorem Ipsum είναι απλά ένα κείμενο χωρίς νόημα για τους επαγγελματίες της τυπογραφίας και στοιχειοθεσίας. Το Lorem Ipsum είναι το επαγγελματικό πρότυπο όσον αφορά το κείμενο χωρίς νόημα, από τον 15ο αιώνα, όταν ένας ανώνυμος τυπογράφος πήρε ένα δοκίμιο και ανακάτεψε τις λέξεις για να δημιουργήσει ένα δείγμα βιβλίου. Όχι μόνο επιβίωσε πέντε αιώνες, αλλά κυριάρχησε στην ηλεκτρονική στοιχειοθεσία, παραμένοντας με κάθε τρόπο αναλλοίωτο. Έγινε δημοφιλές τη δεκαετία του '60 με την έκδοση των δειγμάτων της Letraset όπου περιελάμβαναν αποσπάσματα του Lorem Ipsum, και πιο πρόσφατα με το λογισμικό ηλεκτρονικής σελιδοποίησης όπως το Aldus PageMaker που περιείχαν εκδοχές του Lorem Ipsum."
+    },
+    {
+      "date": "24/02/2021",
+      "imgSrc":"",
+      "title": "Last Meting",
+      "body": "first partner meeting that took place in Kozani"
+    },
+    {
+      "date": "24/02/2021",
+      "imgSrc": "https://picsum.photos/300/300?random=2",
+      "title": "Last Meting",
+      "body": "first partner meeting that took place in Kozani"
+    },
+    {
+      "date": "24/03/2021",
+      "imgSrc": "https://picsum.photos/300/300?random=3",
+      "title": "Third Meting",
+      "body": "first partner meeting that took place in Kozani"
+    },
+    {
+      "date": "24/03/2021",
+      "imgSrc": "",
+      "title": "Second Meting",
+      "body": "first partner meeting that took place in Kozani"
+    },
+    {
+      "date": "24/02/2021",
+      "imgSrc": "https://picsum.photos/300/300",
+      "title": "First Meting",
+      "body": "first partner meeting that took place in Kozani"
+    },
+    {
+      "date": "01/02/2021",
+      "imgSrc": "https://picsum.photos/300/300?random=1",
+      "title": "Project Start",
+      "body": "The project has started!<br />Time for action"
+    }
+  ]
+}

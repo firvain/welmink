@@ -1,15 +1,27 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "../views/Home/Home.vue";
+import { auth } from "../plugins/firebase";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
+    path: "*",
+    component: () => import(/* webpackChunkName: "404" */ "../views/404.vue")
+  },
+  {
     path: "/",
     name: "Home",
     component: Home
   },
+  {
+    path: "/login",
+    name: "Login",
+    component: () =>
+      import(/* webpackChunkName: "login" */ "../views/Login.vue")
+  },
+
   {
     path: "/project",
     name: "Project",
@@ -17,7 +29,18 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "project" */ "../views/Project.vue")
+      import(/* webpackChunkName: "project" */ "../views/Project/Project.vue")
+  },
+  {
+    path: "/partners",
+    name: "Partners",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "partners" */ "../views/Partners/Partners.vue"
+      )
   },
   {
     path: "/news",
@@ -25,7 +48,8 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "news" */ "../views/News.vue")
+    component: () =>
+      import(/* webpackChunkName: "news" */ "../views/News/News.vue")
   },
   {
     path: "/files",
@@ -34,7 +58,10 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "files" */ "../views/Files.vue")
+      import(/* webpackChunkName: "files" */ "../views/Files.vue"),
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: "/contact",
@@ -52,5 +79,13 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
-
+// navigation guard to check for logged in users
+router.beforeEach((to, from, next) => {
+  const requiresAuth = to.matched.some(x => x.meta.requiresAuth);
+  if (requiresAuth && !auth.currentUser) {
+    next("/login");
+  } else {
+    next();
+  }
+});
 export default router;

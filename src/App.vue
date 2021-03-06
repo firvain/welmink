@@ -6,7 +6,7 @@
           alt="WelMink Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          :src="require('@/assets/mink_logo.svg')"
           transition="scale-transition"
           width="40"
         />
@@ -16,13 +16,13 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
+      <v-btn v-if="!isLogged" :to="{ path: '/login' }" text>
         <span class="mr-2">{{ $t("user.login") }}</span>
         <v-icon>mdi-login-variant</v-icon>
+      </v-btn>
+      <v-btn v-if="isLogged" @click="logout" text>
+        <span class="mr-2">{{ $t("user.logout") }}</span>
+        <v-icon>mdi-logout-variant</v-icon>
       </v-btn>
       <v-btn @click="setLanguage" text>
         <v-icon v-if="this.$i18n.locale === 'en'">$UkFlag</v-icon>
@@ -30,15 +30,9 @@
       </v-btn>
       <template v-slot:extension>
         <v-tabs v-model="tab" centered>
-          <v-tab :to="{ path: '/' }">{{ $t("appbar.tabs.home") }}</v-tab>
-          <v-tab :to="{ path: '/project' }">{{
-            $t("appbar.tabs.project")
-          }}</v-tab>
-          <v-tab :to="{ path: '/news' }">{{ $t("appbar.tabs.news") }}</v-tab>
-          <v-tab :to="{ path: '/files' }">{{ $t("appbar.tabs.files") }}</v-tab>
-          <v-tab :to="{ path: '/contact' }">{{
-            $t("appbar.tabs.contact")
-          }}</v-tab>
+          <v-tab v-for="(tab, index) in tabs" :key="index" :to="tab.path">
+            {{ tab.text }}
+          </v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
@@ -46,31 +40,53 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <Footer app />
+    <AppFooter app />
   </v-app>
 </template>
 
 <script>
-import Footer from "./components/Footer";
+import AppFooter from "./components/AppFooter";
 // import Home from "./views/Home.vue";
 export default {
   name: "App",
 
   components: {
     // Home,
-    Footer
+    AppFooter
   },
   data() {
-    return { tab: null };
+    return {
+      tab: null
+    };
+  },
+  computed: {
+    isLogged() {
+      return this.$store.state.isLoggedIn;
+    },
+    tabs() {
+      return [
+        { path: "/", text: this.$t("appbar.tabs.home") },
+        { path: "/project", text: this.$t("appbar.tabs.project") },
+        { path: "/partners", text: this.$t("appbar.tabs.partners") },
+        { path: "/news", text: this.$t("appbar.tabs.news") },
+        { path: "/files", text: this.$t("appbar.tabs.files") },
+        { path: "/contact", text: this.$t("appbar.tabs.contact") }
+      ];
+    }
   },
   methods: {
     setLanguage() {
-      console.log(this.$vuetify.icons);
       if (this.$i18n.locale === "en") {
         this.$i18n.locale = "el";
+
+        this.$forceUpdate();
       } else {
         this.$i18n.locale = "en";
+        this.$forceUpdate();
       }
+    },
+    logout() {
+      this.$store.dispatch("logout");
     }
   }
 };

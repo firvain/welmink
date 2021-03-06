@@ -13,15 +13,32 @@
     "tabs": {
       "home": "Home",
       "project": "Project",
+      "partners": "Partners",
       "news": "News",
       "files": "Files",
       "contact": "Contact"
     }
   },
+  "appfooter": {
+    "funding": "The project is funded by ROP Western Macedonia"
+  },
   "contact": {
     "name": "Name",
-    "emai": "Email",
+    "email": "Email",
     "message": "Your Message",
-    "submit": "submit"
+    "submit": "submit",
+    "successSubmit": "Submitted Succesfully",
+    "errorSubmit": "Something went wrong!"
+  },
+  "pages": {
+    "project": {
+      "title": "Project",
+      "description": "Project Description",
+      "target": "Project Target"
+    },
+
+    "news": {
+      "projectNews": "Project News"
+    }
   }
 }

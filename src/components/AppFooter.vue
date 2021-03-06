@@ -1,6 +1,11 @@
 <template>
   <v-footer dark padless>
-    <v-card flat tile class="primary lighten-1 white--text text-center">
+    <v-card
+      flat
+      tile
+      class="primary lighten-1 white--text text-center mx-auto"
+      width="100%"
+    >
       <v-row
         ><v-col cols="12">
           <v-card-text>
@@ -17,22 +22,18 @@
           </v-card-text>
         </v-col></v-row
       >
-
-      <v-row
-        ><v-col cols="4">
+      <v-row align="center" justify="center">
+        <v-col cols="4">
           <v-card-text class="white--text pt-0">
-            Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
-            Mauris cursus commodo interdum. Praesent ut risus eget metus luctus
-            accumsan id ultrices nunc. Sed at orci sed massa consectetur
-            dignissim a sit amet dui. Duis commodo vitae velit et faucibus.
-            Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum
-            ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel
-            diam elementum tempor vel ut orci. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus.
+            {{ $t("appfooter.funding") }}
+          </v-card-text>
+        </v-col>
+        <v-col cols="4">
+          <v-card-text class="white--text pt-0">
+            {{ $t("appfooter.funding") }}
           </v-card-text>
         </v-col>
       </v-row>
-
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
@@ -43,7 +44,7 @@
 </template>
 <script>
 export default {
-  name: "footer",
+  name: "AppFooter",
   data: () => ({
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"]
   })
