@@ -67,6 +67,7 @@ export default {
       return [
         { path: "/", text: this.$t("appbar.tabs.home") },
         { path: "/project", text: this.$t("appbar.tabs.project") },
+        { path: "/partners", text: this.$t("appbar.tabs.partners") },
         { path: "/news", text: this.$t("appbar.tabs.news") },
         { path: "/files", text: this.$t("appbar.tabs.files") },
         { path: "/contact", text: this.$t("appbar.tabs.contact") }

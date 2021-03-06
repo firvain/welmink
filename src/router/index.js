@@ -7,6 +7,10 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: "*",
+    component: () => import(/* webpackChunkName: "404" */ "../views/404.vue")
+  },
+  {
     path: "/",
     name: "Home",
     component: Home
@@ -26,6 +30,17 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "project" */ "../views/Project/Project.vue")
+  },
+  {
+    path: "/partners",
+    name: "Partners",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "partners" */ "../views/Partners/Partners.vue"
+      )
   },
   {
     path: "/news",

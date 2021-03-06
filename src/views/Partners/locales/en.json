@@ -1,0 +1,26 @@
+{ 
+  "title": "Partnership",
+  "partners": [
+    {
+      "title": "ZACHARIAS KOTSIMPOS - ALEKSANDRA MARIA VARKA GP",
+      "subtitle": "COSMO FURS FARM",
+      "body": "",
+      "logo": "",
+      "link": ""
+    },
+    {
+      "title":"SPECIAL ACCOUNT FOR RESEARCH FUNDS",
+      "subtitle": "ARISTOTLE UNIVERSITY OF THESSALONIKI",
+      "body": "",
+      "logo": "auth-logo.png",
+      "link": "https://www.auth.gr/"
+    },
+    {
+      "title": "SPECIAL ACCOUNT FOR RESEARCH FUNDS",
+      "subtitle": "UNIVERSITY OF WESTERN MACEDONIA",
+      "body": "",
+      "logo": "uowm-logo.png",
+      "link":"https://uowm.gr/"
+    }
+  ]
+}
