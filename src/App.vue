@@ -16,14 +16,14 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn v-if="!isLogged" :to="{ path: '/login' }" text>
-        <span class="mr-2">{{ $t("user.login") }}</span>
-        <v-icon>mdi-login-variant</v-icon>
-      </v-btn>
-      <v-btn v-if="isLogged" @click="logout" text>
-        <span class="mr-2">{{ $t("user.logout") }}</span>
-        <v-icon>mdi-logout-variant</v-icon>
-      </v-btn>
+      <!--      <v-btn v-if="!isLogged" :to="{ path: '/login' }" text>-->
+      <!--        <span class="mr-2">{{ $t("user.login") }}</span>-->
+      <!--        <v-icon>mdi-login-variant</v-icon>-->
+      <!--      </v-btn>-->
+      <!--      <v-btn v-if="isLogged" @click="logout" text>-->
+      <!--        <span class="mr-2">{{ $t("user.logout") }}</span>-->
+      <!--        <v-icon>mdi-logout-variant</v-icon>-->
+      <!--      </v-btn>-->
       <v-btn @click="setLanguage" text>
         <v-icon v-if="this.$i18n.locale === 'en'">$UkFlag</v-icon>
         <v-icon v-else>$GreekFlag</v-icon>
@@ -67,10 +67,10 @@ export default {
       return [
         { path: "/", text: this.$t("appbar.tabs.home") },
         { path: "/project", text: this.$t("appbar.tabs.project") },
-        { path: "/partners", text: this.$t("appbar.tabs.partners") },
-        { path: "/news", text: this.$t("appbar.tabs.news") },
-        { path: "/files", text: this.$t("appbar.tabs.files") },
-        { path: "/contact", text: this.$t("appbar.tabs.contact") }
+        { path: "/partners", text: this.$t("appbar.tabs.partners") }
+        // { path: "/news", text: this.$t("appbar.tabs.news") },
+        // { path: "/files", text: this.$t("appbar.tabs.files") },
+        // { path: "/contact", text: this.$t("appbar.tabs.contact") }
       ];
     }
   },

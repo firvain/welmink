@@ -9,18 +9,18 @@
       "link": ""
     },
     {
-      "title":"SPECIAL ACCOUNT FOR RESEARCH FUNDS",
-      "subtitle": "ARISTOTLE UNIVERSITY OF THESSALONIKI",
+      "title":"SCHOOL OF VETERINARY MEDICINE",
+      "subtitle": "",
       "body": "",
       "logo": "auth-logo.png",
       "link": "https://www.auth.gr/"
     },
     {
-      "title": "SPECIAL ACCOUNT FOR RESEARCH FUNDS",
-      "subtitle": "UNIVERSITY OF WESTERN MACEDONIA",
+      "title": "DEPARTMENT OF ELECTRICAL AND COMPUTER ENGINEERING",
+      "subtitle": "TELECOMMUNICATION NETWORKS & ADVANCED SERVICES LABORATORY",
       "body": "",
       "logo": "uowm-logo.png",
-      "link":"https://uowm.gr/"
+      "link":"https://telnas.ece.uowm.gr/"
     }
   ]
 }
