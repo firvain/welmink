@@ -29,7 +29,7 @@
           </v-card-text>
         </v-col>
         <v-col cols="4" class="ma-2">
-          <v-img src="@/assets/all-logo.png"></v-img>
+          <v-img src="@/assets/all-logo.png" contain max-height="150"></v-img>
         </v-col>
       </v-row>
       <v-divider></v-divider>
