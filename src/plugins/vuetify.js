@@ -19,7 +19,17 @@ export default new Vuetify({
         warning: "#ff5722",
         info: "#2196f3",
         success: "#4caf50"
+      },
+      dark: {
+        primary: "#000000",
+        secondary: "#ffffff",
+        accent: "#000000",
+        error: "#000000",
+        warning: "#ff5722",
+        info: "#2196f3",
+        success: "#4caf50"
       }
+
     }
   },
   icons: {

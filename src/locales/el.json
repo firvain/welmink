@@ -40,5 +40,12 @@
     "news": {
       "projectNews": "Νέα του Project"
     }
+
+  },
+  "accessibility": {
+    "increaseFontSize": "Μεγέθυνση Γραμματοσειράς",
+    "decreaseFontSize": "Μείωση Γραμματοσειράς",
+    "highContrast": "Υψηλή Αντίθεση",
+    "reset": "Επαναφορά"
   }
 }

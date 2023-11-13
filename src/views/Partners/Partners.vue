@@ -27,8 +27,9 @@
               height="80"
               width="160"
               v-if="partner.logo"
+              :color="$vuetify.theme.dark ? 'white': ''"
             >
-              <v-img contain :src="require('@/assets/' + partner.logo)"></v-img>
+              <v-img contain :src="require('@/assets/' + partner.logo)" ></v-img>
             </v-list-item-avatar>
             <v-list-item-avatar
               v-else

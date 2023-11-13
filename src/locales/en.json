@@ -40,5 +40,11 @@
     "news": {
       "projectNews": "Project News"
     }
+  },
+  "accessibility": {
+    "increaseFontSize": "Increase Font Size",
+    "decreaseFontSize": "Decrease Font Size",
+    "highContrast": "High Contrast",
+    "reset": "Reset"
   }
 }
