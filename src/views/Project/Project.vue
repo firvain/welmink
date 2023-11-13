@@ -52,6 +52,7 @@
 </template>
 <script>
 import el from "./locales/el.json";
+import en from "./locales/en.json";
 export default {
   name: "project",
   data() {
@@ -59,8 +60,11 @@ export default {
   },
   computed: {
     posts() {
-      console.log(el);
-      return el.contents;
+      // get i18n locale
+      const locale = this.$i18n.locale;
+      if (locale === "el") return el.contents;
+       return en.contents;
+
     }
   }
 };
